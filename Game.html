@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valerach-Advanced VALORANT searching platform</title>
+  <link rel="icon" href="../img/valorantlogo-removebg-preview.png">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <style>
+    h1{
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    p{
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .footerofgamepage h1{
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .footerofgamepage p {
+      color:white;
+    }
+    .footerimage{
+      width: 140px;
+      height: 175px;
+      margin-left: 520px;
+    }
+  </style>
+  <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header{
+        background: black;
+      }
+      li{
+        list-style: none;
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+      .navbar{
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+      }
+      .nav-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px; 
+      }
+      .nav-branding{
+        font-size: 3rem;
+      }
+      .nav-link{
+        transition: 0.7s ease;
+      }
+      .nav-link:hover{
+        color: dodgerblue;
+        opacity: 80%;
+      }
+      .hamburger{
+        display: none;
+        cursor: pointer;
+      }
+      .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition:all 0.3s ease-in-out;
+        background-color: white;
+      }
+      #dropdownMenuLink{
+        color: dodgerblue;
+      }
+      #log-inbutton{
+        color: aliceblue;
+        border-radius: 8px;
+        left: 2cm;
+      }
+      .navbar-brand{
+        width: 65px;
+        height: 63px;
+      }
+    @media (max-width:425px){
+        .hamburger{
+          display: block;
+        }
+        .hamburger.active .bar:nth-child(2){
+          opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(1){
+          transform: translateY(2px) rotate(180deg);
+        }
+        .hamburger.active .bar:nth-child(3){
+          transform: translateY(-2px) rotate(-180deg);
+        }
+        .nav-menu{
+          position: fixed;
+          width: 50%;
+          gap: 0;
+          height: fit-content;
+          position: absolute;
+          left: -50%;
+          top: 60px;
+          flex-direction: column;
+          background-color: #262622;
+          text-align: center;
+          transition: 0.5s;
+          z-index: 1;
+        }
+        .dropdown-item{
+          margin: 30px 20px;
+        }
+        .nav-item{
+          margin: 15px 30px;
+        }
+        .nav-menu.active{
+          left: 0;
+        }
+      }
+  </style>
+  <!--nav responsive-->
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="../img/valorantlogo-removebg-preview.png" alt="" class="navbar-brand">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="navigation.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.vcrdb.net/" class="nav-link">Media</a>
+        </li>
+        <li class="nav-item">
+          <a href="Game.html" class="nav-link">News</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="faq.html" class="nav-link">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://valorantesports.com/" class="nav-link">E-sports</a>
+        </li>
+        <li class="nav-pills nav-fill bg-danger" id="log-inbutton">
+          <a href="Sign-Up.html" class="nav-link">Sign-Up</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+    <!-- navbar -->
+  <!-- nav -->
+  <div class="row">
+    <h1 class="display-3 text-decoration-underline justify-content-center text-center"><strong>Maps</strong></h1>
+    <hr class="col-12">
+    <div class="card-group col-4 col-md-4 col-lg-2" style="width: 450px; background-color: skyblue;">
+      <img src="../img/ice box.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+          <h1 class="card-tittle"><strong>Ice-Box</strong></h1>
+          <p class="card-text">Your next battleground is a secret Kingdom excavation site overtaken by the arctic. The two plant sites protected by snow and metal require some horizontal finesse. Take advantage of the ziplines and they’ll never see you coming.</p>
+          <a href="https://www.youtube.com/watch?v=EB4vFzY3MWc" class="btn btn-outline-primary">Watch the Video</a>
+      </div>
+    </div>
+    <div class="card-group" style="width: 450px; background-color: skyblue;">
+      <img src="../img/facture.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+          <h1 class="card-tittle"><strong>FACTURE</strong></h1>
+          <p class="card-text">A top secret research facility split apart by a failed radianite experiment. With defender options as divided as the map, the choice is yours: meet the attackers on their own turf or batten down the hatches to weather the assault.</p>
+          <a href="https://www.youtube.com/watch?v=2CR4Wy8dKrY" class="btn btn-outline-primary">Watch the Video</a>
+      </div>
+    </div>
+    <div class="card-group" style="width: 450px; background-color: skyblue;">
+      <img src="../img/bind.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+          <h1 class="card-tittle"><strong>BIND</strong></h1>
+          <p class="card-text">Two sites. No middle. Gotta pick left or right. What’s it going to be then? Both offer direct paths for attackers and a pair of one-way teleporters make it easier to flank.</p>
+          <a href="hhttps://www.youtube.com/watch?v=-M_r8MKQ3mo" class="btn btn-outline-primary">Watch the Video</a>
+      </div>
+    </div>
+    <div class="card-group col-4 col-md-4 col-lg-2" style="width: 450px; background-color: skyblue;">
+      <img src="../img/ascent.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+          <h1 class="card-tittle"><strong>Ascent</strong></h1>
+          <p class="card-text">An open playground for small wars of position and attrition divide two sites on Ascent. Each site can be fortified by irreversible bomb doors; once they’re down, you’ll have to destroy them or find another way. Yield as little territory as possible.</p>
+          <a href="https://www.youtube.com/watch?v=IhhjcB2ZjIM" class="btn btn-outline-primary">Watch the Video</a>
+      </div>
+    </div>
+    <div class="card-group col-4 col-md-4 col-lg-2" style="width: 450px; background-color: skyblue;">
+      <img src="../img/breeze.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+          <h1 class="card-tittle"><strong>BREEZE</strong></h1>
+          <p class="card-text">Take in the sights of historic ruins or seaside caves on this tropical paradise. But bring some cover. You'll need them for the wide open spaces and long range engagements. Watch your flanks and this will be a Breeze.</p>
+          <a href="https://www.youtube.com/watch?v=HuI3qdaL-jI" class="btn btn-outline-primary">Watch the Video</a>
+      </div>
+    </div>
+    <div class="card-group col-4 col-md-4 col-lg-2" style="width: 450px; background-color: skyblue;">
+      <img src="../img/Haven.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+          <h1 class="card-tittle"><strong>HAVEN</strong></h1>
+          <p class="card-text">Beneath a forgotten monastery, a clamour emerges from rival Agents clashing to control three sites. There’s more territory to control, but defenders can use the extra real estate for aggressive pushes.</p>
+          <a href="https://www.youtube.com/watch?v=M9uuF6TTut0" class="btn btn-outline-primary">Watch the Video</a>
+      </div>
+    </div>
+  </div>
+  <!-- map cards -->  
+  <div>
+      <div class="row">
+    <div class="modal fade" id="JettModal"aria-labelledby="JettModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="JettModalLabel"><strong>JETT</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/jettonult.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>Duelists</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies before they even know what hit them.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+  </div>
+      </div>
+      <!-- jett modal -->
+      <div class="">
+    <div class="modal fade" id="ChamberModal"aria-labelledby="ChamberModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ChamberModalLabel"><strong>CHAMBER</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/chamber.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>SENTINEL</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Well dressed and well armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+  </div>
+      </div>
+      <!-- chamber modal -->
+      <div class="">
+    <div class="modal fade" id="YoruModal"aria-labelledby="YoruModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="YoruModalLabel"><strong>YORU</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/yoru.png" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>Duelist</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Japanese native, Yoru, rips holes straight through reality to infiltrate enemy lines unseen. Using deception and aggression in equal measure, he gets the drop on each target before they know where to look.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+  </div>
+      </div>
+      <!-- yoru modal -->
+      <div class="">
+    <div class="modal fade" id="RazeModal"aria-labelledby="RazeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="RazeModalLabel"><strong>RAZE</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/raze.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>Duelist</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma playstyle, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of “boom.”</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Raze modal -->
+      <div class="">
+    <div class="modal fade" id="NeonModal"aria-labelledby="NeonModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="NeonModalLabel"><strong>CHAMBER</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/neon1.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>Duelist</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Filipino Agent Neon surges forward at shocking speeds, discharging bursts of bioelectric radiance as fast as her body generates it. She races ahead to catch enemies off guard, then strikes them down quicker than lightning.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Neon modal -->
+      <div class="">
+    <div class="modal fade" id="PhoneixModal"aria-labelledby="PhoneixModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="PhoneixModalLabel"><strong>PHONEIX</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Phoneix.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>Duelist</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms..</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Phoneix modal -->
+      <div class="">
+    <div class="modal fade" id="ReynaModal"aria-labelledby="ReynaModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ReynaModalLabel"><strong>REYNA</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/reyna.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>Duelist</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Reyna modal -->
+      <div class="">
+    <div class="modal fade" id="BrimstoneModal"aria-labelledby="BrimstoneModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="BrimstoneModalLabel"><strong>BRIMSTONE</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/brimstone.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>CONTROLLER</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Joining from the USA, Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and from a distance makes him an unmatched boots-on-the-ground commander.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Brimstone Modal -->
+      <div class="">
+    <div class="modal fade" id="ViperModal"aria-labelledby="ViperModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ViperModalLabel"><strong>VIPER</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/viper.png" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>CONTROLLER</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>The American chemist, Viper deploys an array of poisonous chemical devices to control the battlefield and cripple the enemy's vision. If the toxins don't kill her prey, her mind games surely will.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Viper Modal -->
+      <div class="">
+    <div class="modal fade" id="OmenModal"aria-labelledby="OmenModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="OmenModalLabel"><strong>OMEN</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Valorant_Omen.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>CONTROLLER</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Omen Modal -->
+      <div class="">
+    <div class="modal fade" id="AstraModal"aria-labelledby="AstraModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="AstraModalLabel"><strong>ASTRA</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Astra.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>CONTROLLER</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Ghanaian Agent Astra harnesses the energies of the cosmos to reshape battlefields to her whim. With full command of her astral form and a talent for deep strategic foresight, she's always eons ahead of her enemy's next move.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Astra Modal -->
+      <div class="">
+    <div class="modal fade" id="HarborModal"aria-labelledby="HarborModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="HarborModalLabel"><strong>HARBOR</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Harbor.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>CONTROLLER</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Hailing from India’s coast, Harbor storms the field wielding ancient technology with dominion over water. He unleashes frothing rapids and crushing waves to shield his allies and pummel those that oppose him..</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Harbor Modal -->
+      <div class="">
+    <div class="modal fade" id="SageModal"aria-labelledby="SageModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SageModalLabel"><strong>SAGE</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/sage.jpg"alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5> 
+          <h1 class="display-4"><strong>SENTINEL</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Sage Modal -->
+      <div class="">
+    <div class="modal fade" id="CypherModal"aria-labelledby="CypherModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="CypherModalLabel"><strong>CYPHER</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/cypher.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>SENTINAL</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary"data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Cypher Modal -->
+      <div class="">
+    <div class="modal fade" id="KilljoyModal"aria-labelledby="KilljoyModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="KilljoyModalLabel"><strong>KILLJOY</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/kj.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>SENTINAL</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary"data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Killjoy Modal -->
+      <div class="">
+    <div class="modal fade" id="FadeModal"aria-labelledby="FadeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="FadeModalLabel"><strong>FADE</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Fade.jpeg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>INITIATOR</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Turkish bounty hunter, Fade, unleashes the power of raw nightmares to seize enemy secrets. Attuned with terror itself, she hunts targets and reveals their deepest fears—before crushing them in the dark.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary"data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!--Fade Modal-->
+      <div class="">
+    <div class="modal fade" id="SovaModal"aria-labelledby="SovaModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SovaModalLabel"><strong>SOVA</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Sova.png" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>INITIATOR</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Sova Modal -->
+      <div class="">
+    <div class="modal fade" id="BreachModal"aria-labelledby="BreachModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="BreachModalLabel"><strong>BREACH</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/breach.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>INITIATOR</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Breach, the bionic Swede, fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Breach Modal -->
+      <div class="">
+    <div class="modal fade" id="SkyeModal"aria-labelledby="SkyeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="SkyeModalLabel"><strong>SKYE</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Skype.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>INITIATOR</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye’s side.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- Skye Modal -->
+      <div class="">
+    <div class="modal fade" id="KAY/OModal"aria-labelledby="KAY/OModalLabel" aria-hidden="true">
+      <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="KAY/OModalLabel"><strong>KAY/O</strong></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="../img/Skype.jpg" alt="" style="width: fit-content;" class="w-100">
+          <h5>//ROLE</h5>
+          <h1 class="display-4"><strong>INITIATOR</strong></h1>
+          <h5>// BIOGRAPHY</h5>
+          <p>KAY/O is a machine of war built for a single purpose: neutralizing radiants. His power to suppress enemy abilities cripples his opponents' capacity to fight back, securing him and his allies the ultimate edge.</p>
+        </div>
+        <div class="modal-footer">
+         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+       </div>
+     </div>
+    </div>
+   </div>
+      </div>
+      <!-- KAY/O Modal -->
+  </div>
+  <!-- modal of agents -->
+  <div>
+    <h1 class="display-5 text-capitalize text-center" style="font-family:sans-serif;">AGENT</h1>
+    <p class="text-center text-decoration-underline"><strong> More than guns and bullets,</strong> you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlight reels will look the same.</p>
+  </div>
+  <table class="table table-hover w-100 justify-content-center text-center m-md-auto m-2" style="border-style: inherit; background-color: antiquewhite">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Biography</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Brimstone</td>
+        <td>35</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#BrimstoneModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Phoneix</td>
+        <td>25</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#PhoneixModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Sage</td>
+        <td>18</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#SageModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Sova</td>
+        <td>35</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#SovaModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Viper</td>
+        <td>30</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#ViperModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Cypher</td>
+        <td>40</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#CypherModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>Reyna</td>
+        <td>20</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#ReynaModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Kill Joy</td>
+        <td>24</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#KilljoyModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Breach</td>
+        <td>30</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#BreachModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Omen</td>
+        <td>25</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#OmenModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>Jett</td>
+        <td>22</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#JettModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>Raze</td>
+        <td>18</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#RazeModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>Skype</td>
+        <td>35</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#SkyeModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td>Yoru</td>
+        <td>28</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#YoruModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td>Astra</td>
+        <td>32</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#AstraModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">16</th>
+        <td>Kay/o</td>
+        <td>40 (Robot)</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#KAY/OModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">17</th>
+        <td>Chamber</td>
+        <td>38</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#ChamberModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">18</th>
+        <td>Neon</td>
+        <td>24</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#NeonModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">19</th>
+        <td>Fade</td>
+        <td>27</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#FadeModal">
+          View
+        </button></td>
+      </tr>
+      <tr>
+        <th scope="row">20</th>
+        <td>Harbor</td>
+        <td>30</td>
+        <td><button type="" class="text-decoration-underline btn" data-bs-toggle="modal" data-bs-target="#HarborModal">
+          View
+        </button></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- table of agent -->
+  <div class="row bg-dark footerofgamepage">
+    <hr>
+    <h1 class="text-center">About The Game</h1>
+    <div class="col-6 col-md-6 my-4">
+      <p>Valorant is a first-person hero shooter developed and published by <strong>Riot Games</strong>, for Microsoft Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by a release on June 2, 2020.E.Valorant is a character-based 5v5 tactical shooter set on the global stage. Outwit, outplay, and outshine your competition with tactical abilities.</p>
+      <br>
+      <div style="margin-left:25px;">
+        <p>Initial release date: June 2, 2020</p>
+        <br>
+        <p>Mode: <code>Multiplayer video game</code></p>
+        <br>
+        <p>Engine: <code>Unreal Engine 4</code></p>
+        <br>
+        <p>Developer: <code>Riot Games </code></p>
+        <br>
+        <p>Platform:<code>Microsoft Windows</code></p>
+        <br>
+        <p>Composer:<code>Jesse Harlin</code></p>
+        <br>
+        <p>Nominations:<code class="text-decoration-underline">The Game Award for Best  ESports Game, MORE</code></p>
+      </div>
+    </div>
+  <div class="accordion col-6 col-md-6 my-4" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Ranking System
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>There are nine ranks or divisions in the Valorant ranking system:</strong>
+          <br>
+          <li>Iron.</li>
+          <li>Bronze.</li>
+          <li>Silver.</li>
+          <li>Gold.</li>
+          <li>Platinum.</li>
+          <li>Diamond.</li>
+          <li>Ascendant.</li>
+          <li>Immortal.</li>
+          <li>Radiant.</li>
+        </div>
+      </div>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+           Tips
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>General Tips</strong>
+            <li>Have Fun!</li>
+            <li>Don't stick to one agent/type of agent.</li>
+            <li>ADS (aim down sights) isn't necessary, so don't force it. ...</li>
+            <li>Learn every inch of maps. .</li>
+            <li>It's tempting to save ultimate abilities for big multikill plays, but the reality is Valorant isn't about the big plays - it's about the small victories.</li>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  <!-- gamepage of footer -->
+  <!-- footer -->
+  <section class="bg-white">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+            <div class="px-5 py-2">
+                <a href="faq.html" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    FAQ
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="Game.html" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    NEW
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="navigation.html" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    HOME
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="Sign-Up.html" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                   SIgn-Up
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="contact.html" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Contact
+                </a>
+            </div>
+            <div class="px-5 py-2">
+                <a href="https://www.riotgames.com/en/terms-of-service" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Terms
+                </a>
+            </div>
+        </nav>
+        <div class="flex justify-center mt-8 space-x-6">
+            <a href="https://facebook.com" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                </svg>
+            </a>
+            <a href="github.com" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Dribbble</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+        <p class="mt-8 text-base leading-6 text-center text-gray-400">
+            © 2021 SomeCompany, Inc. All rights reserved.
+        </p>
+    </div>
+  </section>
+  <!-- footer -->
+  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
